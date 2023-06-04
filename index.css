@@ -1,36 +1,297 @@
-@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+@import url("https://fonts.cdnfonts.com/css/sofia-pro");
 * {
-    margin: 0;
-    padding: 0;
-    transition: 0.25 all ease;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Sofia Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.25 all ease;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Sofia Pro", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 section:not(#main) {
-    margin: 54px;
+  margin: 54px;
 }
 
 section {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    margin: 0 54px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin: 0 54px;
 }
 
 body {
-    background-color: #094D92;
+  background-color: #094d92;
 }
-
 
 /* Custom Button  */
 
 .trans-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 700;
+  width: 20%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.trans-btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* navbar */
+
+.main-header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  padding: 0 3rem;
+}
+
+.main-header .navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 0.5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.main-header .navbar #logo:hover {
+  transition: transform 1s;
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+
+.main-header .navbar ul {
+  display: flex;
+}
+
+.main-header .navbar .brand {
+  display: flex;
+  width: auto;
+  height: 100%;
+  align-items: center;
+}
+
+.main-header .navbar .brand img {
+  height: 50%;
+  display: flex;
+}
+
+.main-header .navbar .social .bx:hover,
+.main-header .navbar a:hover {
+  opacity: 0.8;
+}
+
+.main-header .navbar .social i {
+  line-height: 1rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 20px;
+}
+
+/* product section */
+
+.pepsi-main {
+  width: auto;
+  height: 95vh;
+  background: url("assets/main_background.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pepsi-getir {
+  width: auto;
+  height: 95vh;
+  background: url("assets/getir.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pepsi-main-max {
+  width: auto;
+  height: 95vh;
+  background: url("assets/pepsi_max.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pepsi-main-max-lg {
+  width: auto;
+  height: 95vh;
+  background: url("assets/muhtesem_lezzet_banner_.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pepsi-main-twist {
+  width: auto;
+  height: 95vh;
+  background: url("assets/twist_banner.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.products-pepsi {
+  background-color: #005ab3;
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products-pepsi .pepsi-box {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 65%;
+}
+
+.products-pepsi .pepsi-box img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.products-pepsi .pepsi-box img:hover {
+  animation: shake 0.9s ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  20% {
+    transform: rotate(2deg) scale(1.2);
+  }
+  30% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(2deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(2deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  80% {
+    transform: rotate(2deg) scale(1.2);
+  }
+  90% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Social Media  */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #fff;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-container img {
+  width: 20%;
+  height: auto;
+  margin: 10px;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text-container span {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #0065c3;
+}
+
+/* Footer */
+
+footer {
+  background-color: #0065c3;
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer span {
+  padding: 0 5px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+footer span:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .social > i {
+    display: none !important;
+  }
+
+  .main-header .navbar {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  section:not(#main) {
+    margin: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  section {
+    margin: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .trans-btn {
     background-color: transparent;
     color: white;
     border: 2px solid white;
@@ -38,240 +299,32 @@ body {
     padding: 10px 20px;
     font-size: 24px;
     font-weight: 700;
-    width: 20%;
+    width: 50%;
     transition: background-color 0.3s, color 0.3s;
-}
+  }
 
-.trans-btn:hover {
+  .trans-btn:hover {
     background-color: white;
     color: black;
     cursor: pointer;
-}
-
-#menu {
-    font-size: 30px;
-    display: none;
-}
-
-
-/* navbar */
-
-.main-header .navbar {
+  }
+  .products-pepsi .pepsi-box {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    width: 100%;
-    height: 80px;
-    padding: 0 3rem;
-}
+   flex-direction: column;
+    width: 40%;
+    
+  }
 
-.main-header .navbar a {
-    color: #fff;
-    padding: 10px 20px;
-    margin: 0 0.5px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-.main-header .navbar #logo:hover {
-    transition: transform 1s;
-    transform: rotate(360deg);
-    cursor: pointer;
-}
-
-.main-header .navbar ul {
-    display: flex;
-}
-
-.main-header .navbar .brand {
-    display: flex;
-    width: auto;
-    height: 100%;
-    align-items: center;
-}
-
-.main-header .navbar .brand img {
-    height: 50%;
-    display: flex;
-}
-
-.main-header .navbar .social .bx:hover,
-.main-header .navbar a:hover {
-    opacity: 0.8;
-}
-
-.main-header .navbar .social i {
-    line-height: 1rem;
-    font-size: 1.4rem;
-    font-weight: 400;
-    letter-spacing: 20px;
-}
-
-
-/* product section */
-
-.pepsi-main {
-    width: auto;
-    height: 95vh;
-    background: url('assets/main_background.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.pepsi-getir {
-    width: auto;
-    height: 95vh;
-    background: url('assets/getir.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.pepsi-main-max {
-    width: auto;
-    height: 95vh;
-    background: url('assets/pepsi_max.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.pepsi-main-max-lg {
-    width: auto;
-    height: 95vh;
-    background: url('assets/muhtesem_lezzet_banner_.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.pepsi-main-twist {
-    width: auto;
-    height: 95vh;
-    background: url('assets/twist_banner.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.products-pepsi {
-    background-color: #005AB3;
-    width: 100%;
-    height: 78vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.products-pepsi .pepsi-box {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    width: 65%;
-}
-
-.products-pepsi .pepsi-box img {
+  .products-pepsi {
+    height: 185vh;
+  }
+  
+  .products-pepsi .pepsi-box img {
     object-fit: cover;
     overflow: hidden;
-}
+  }
 
-.products-pepsi .pepsi-box img:hover {
-    animation: shake 0.9s ease-in-out;
-    transition: 1s all ease-in-out;
-}
-
-@keyframes shake {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    10% {
-        transform: rotate(-2deg) scale(1.20);
-    }
-    20% {
-        transform: rotate(2deg) scale(1.20);
-    }
-    30% {
-        transform: rotate(-2deg) scale(1.20);
-    }
-    40% {
-        transform: rotate(2deg) scale(1.20);
-    }
-    50% {
-        transform: rotate(-2deg) scale(1.20);
-    }
-    60% {
-        transform: rotate(2deg) scale(1.20);
-    }
-    70% {
-        transform: rotate(-2deg) scale(1.20);
-    }
-    80% {
-        transform: rotate(2deg) scale(1.20);
-    }
-    90% {
-        transform: rotate(-2deg) scale(1.20);
-    }
-    100% {
-        transform: rotate(0deg) scale(1);
-    }
-}
-
-
-/* Social Media  */
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
-    background-color: #fff;
-}
-
-.image-container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.image-container img {
-    width: 20%;
-    height: auto;
-    margin: 10px;
-}
-
-.text-container {
+  footer > * {
     text-align: center;
-    margin-top: 10px;
-}
-
-.text-container span {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 36px;
-    color: #0065c3;
-}
-
-
-/* Footer */
-
-footer {
-    background-color: #0065C3;
-    display: flex;
-    width: 100%;
-    height: 12vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer span {
-    padding: 0 5px;
-    color: white;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-}
-
-footer span:hover {
-    opacity: 0.8;
-    cursor: pointer;
+  }
 }
